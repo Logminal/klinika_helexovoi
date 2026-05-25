@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
+import doctorPhoto from '@/src/assets/images/doctor_shelekhova_1779719276785.png';
+
 
 // Custom high-fidelity inline SVG component of the doctor's logo
 const LogoIcon = ({ className = "w-10 h-10 md:w-12 md:h-12" }: { className?: string }) => (
@@ -446,7 +448,7 @@ export default function App() {
                 <div className="relative bg-primary-dark/50 rounded-2xl p-3 border border-cream/10 overflow-hidden shadow-2xl">
                   {/* Real visual placeholder with friendly vet tone */}
                   <img 
-                    src="/src/assets/images/doctor_shelekhova_1779719276785.png" 
+                    src={doctorPhoto} 
                     alt="Клиника доктора Шелеховой" 
                     className="w-full h-[450px] sm:h-[550px] lg:h-[640px] rounded-xl object-cover hover:scale-[1.02] transition-transform duration-500 shadow-md"
                     referrerPolicy="no-referrer"
@@ -682,7 +684,7 @@ export default function App() {
             <div className="lg:col-span-6 bg-white rounded-3xl p-8 border border-stone-200/80 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col md:flex-row gap-6 items-center reveal">
               <div className="w-full md:w-64 h-[480px] rounded-2xl overflow-hidden shrink-0 border border-primary-light relative shadow-md">
                 <img 
-                  src="/src/assets/images/doctor_shelekhova_1779719276785.png" 
+                  src={doctorPhoto} 
                   alt="Доктор Шелехова Мария Владимировна" 
                   className="w-full h-full object-cover rounded-2xl"
                   referrerPolicy="no-referrer"
