@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import doctorPhoto from '@/assets/images/doctor_shelekhova_1779719276785.png';
+import doctorPhoto from './assets/images/doctor_shelekhova_1779719276785.png';
 
 
 // Custom high-fidelity inline SVG component of the doctor's logo
