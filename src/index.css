@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Nunito:ital,wght@0,300..900;1,300..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1D3E32;
+  --color-primary-dark: #122820;
+  --color-primary-light: #F2F7F4;
+  --color-cream: #FAF9F6;
+  --color-cream-dark: #F3EFE9;
+  --color-gold: #C2A26A;
+  --color-gold-hover: #A58550;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Custom CSS animations and patterns */
+@layer utilities {
+  .paw-bg {
+    background-color: var(--color-cream);
+    /* Soft paw prints repeating background */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 100 100'%3E%3Cpath d='M50 40c-2.5 0-4.5 2-4.5 4.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5-2-4.5-4.5-4.5zm-11 5c-2.5 0-4.5 2-4.5 4.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5-2-4.5-4.5-4.5zm22 0c-2.5 0-4.5 2-4.5 4.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5-2-4.5-4.5-4.5zm-14 11s-2-4-5-4-5 4-5 4c0 3 3 6 5 6s5-3 5-6zm6 0s2-4 5-4 5 4 5 4c0 3-3 6-5 6s-5-3-5-6zm-3 8c-6 0-9 4-9 6 0 3.3 2.7 6 6 6s8-4 11-4 8 4 11 4 6-2.7 6-6c0-2-3-6-9-6s-9-3-9-3c0 0-3 3-9 3zm3-14c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3z' fill='%23e0d8ca' fill-opacity='0.18'/%3E%3C/svg%3E");
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scroll Fade-In transition helpers */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
